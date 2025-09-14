@@ -1,5 +1,5 @@
-P=1000
-T=3
-R=0.05
-I=P*T*R
-print(I)
+principle=1000
+time=3
+rate=0.05
+interest=principle*time*rate
+print(interest)
