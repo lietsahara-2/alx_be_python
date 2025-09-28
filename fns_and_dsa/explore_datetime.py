@@ -4,6 +4,8 @@ from datetime import timedelta
 def display_current_datetime():
     global current_date
     current_date = datetime.now()
+    current_date.strftime("%Y-%m-%d %H:%M:%S")
+    
     print(f"current date and time:{current_date}")
 
 def calculate_future_date():
@@ -11,7 +13,6 @@ def calculate_future_date():
     no_of_days = timedelta(days=no_of_days)
     future_date = current_date + no_of_days
     print(f"Future date: {future_date}")
-
 
 
 if __name__ == "__main__":
