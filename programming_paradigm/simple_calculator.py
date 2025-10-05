@@ -1,25 +1,22 @@
-import math
+# simple_calculator.py
 
 class SimpleCalculator:
-    def safe_divide(self, numerator, denominator):
-        try:
-            num = float(numerator)
-            den = float(denominator)
-        except (ValueError, TypeError):
-            return "Error: Invalid input. Please enter numeric values."
+    """A simple calculator class that supports basic arithmetic operations."""
 
-        if math.isnan(num) or math.isnan(den):
-            return "Error: Invalid input. Please enter numeric values."
+    def add(self, a, b):
+        """Return the addition of a and b."""
+        return a + b
 
-        if math.isinf(num) and math.isinf(den):
-            return "Error: Invalid input. Please enter numeric values."
+    def subtract(self, a, b):
+        """Return the subtraction of b from a."""
+        return a - b
 
-        if den == 0.0:
-            return "Error: Division by zero is not allowed."
+    def multiply(self, a, b):
+        """Return the multiplication of a and b."""
+        return a * b
 
-        result = num / den
-
-        if math.isnan(result):
-            return "Error: Invalid input. Please enter numeric values."
-
-        return result
+    def divide(self, a, b):
+        """Return the division of a by b. Returns None if b is zero."""
+        if b == 0:
+            return None
+        return a / b
