@@ -25,6 +25,10 @@ class Library:
     def __str__(self):
         return f"{self.book}, {self.book1}, {self.book2}"     
     
-    def list_books(self): #Prints details of each book in the library.
+    def list_books(self):
         for book in self.books:
-            print(f"{book.__class__.__name__} : {book.title} by {book.author}: {book.file_size if isinstance(book, EBook) else book.page_count if isinstance(book, PrintBook) else ''}")
+            print(
+            f"{book.__class__.__name__}: {book.title} by {book.author}"
+            f"{', File Size: ' + str(book.file_size) + 'KB' if isinstance(book, EBook) else ''}"
+            f"{', Page Count: ' + str(book.page_count) if isinstance(book, PrintBook) else ''}"
+        )
