@@ -15,12 +15,16 @@ class PrintBook(Book):
 
 class Library:
     #Adds a Book, EBook, or PrintBook instance to the library.
-    def __init__(self, books): 
+    def __init__(self): 
         #Initializes an empty list to store books in the library.
         self.books = []
     
     def add_book(self, book):
-        self.books.append(book)        
+        self.books.append(book)   
+
+    def __str__(self):
+        return f"{self.book}, {self.book1}, {self.book2}"     
     
     def list_books(self): #Prints details of each book in the library.
-        return f"{self.book}, {self.book1}, {self.book2}"
+        for book in self.books:
+            print(book)
