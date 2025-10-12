@@ -27,4 +27,4 @@ class Library:
     
     def list_books(self): #Prints details of each book in the library.
         for book in self.books:
-            print(f"{book.__class__.__name__} : {book.title} by {book.author}")
+            print(f"{book.__class__.__name__} : {book.title} by {book.author}: {book.file_size if isinstance(book, EBook) else book.page_count if isinstance(book, PrintBook) else ''}")
