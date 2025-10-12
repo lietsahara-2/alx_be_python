@@ -27,4 +27,4 @@ class Library:
     
     def list_books(self): #Prints details of each book in the library.
         for book in self.books:
-            print(book)
+            print(f"{book.__class__.__name__} : {book.title} by {book.author}")
